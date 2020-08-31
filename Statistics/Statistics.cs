@@ -4,9 +4,9 @@ using System.Collections.Generic;
 namespace Statistics
 {
     public class Stats{
-       internal float ave;
-       internal float max;
-       internal float min;
+       internal Double ave;
+       internal Double max;
+       internal Double min;
          
        Stats(){
        ave=0.0;
@@ -19,16 +19,16 @@ namespace Statistics
         public Stats CalculateStatistics(List<float> numbers) {
             //Implement statistics here
             Stats ans=new Stats();
-            float sum=0.0;
-            for(int i=0;i<numbers.Length;i++){
+            Double sum=0.0;
+            for(int i=0;i<numbers.Count;i++){
                  
                 sum+=numbers[i];
-                ans.max=Math.max(max,numbers[i]);
-                ans.min=Math.min(min,numbers[i]);
+                ans.max=Math.Max(Stats.max,numbers[i]);
+                ans.min=Math.Min(Stats.min,numbers[i]);
                 
             }
-            ans.ave=sum/numbers.Length;
-            if(numbers.Length==0)
+            ans.ave=sum/numbers.Count;
+            if(numbers.Count==0)
                 ans.min=0.0;
             return ans;
             
