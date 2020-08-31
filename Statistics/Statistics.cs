@@ -23,8 +23,8 @@ namespace Statistics
             for(int i=0;i<numbers.Count;i++){
                  
                 sum+=numbers[i];
-                ans.max=Math.Max(Stats.max,numbers[i]);
-                ans.min=Math.Min(Stats.min,numbers[i]);
+                ans.max=Math.Max(ans.max,numbers[i]);
+                ans.min=Math.Min(ans.min,numbers[i]);
                 
             }
             ans.ave=sum/numbers.Count;
