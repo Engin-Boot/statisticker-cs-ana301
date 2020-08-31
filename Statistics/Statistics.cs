@@ -16,7 +16,7 @@ namespace Statistics
     }
     public class StatsComputer
     {
-        public Stats CalculateStatistics(List<float> numbers) {
+        public Stats CalculateStatistics(List<Double> numbers) {
             //Implement statistics here
             Stats ans=new Stats(0.0,0.0,Single.MaxValue);
             Double sum=0.0;
