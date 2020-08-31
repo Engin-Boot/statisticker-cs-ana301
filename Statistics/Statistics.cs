@@ -4,9 +4,9 @@ using System.Collections.Generic;
 namespace Statistics
 {
     public class Stats{
-       internal Double ave;
-       internal Double max;
-       internal Double min;
+       public Double ave;
+       public Double max;
+       public Double min;
          
        Stats(Double ave,Double max,Double min){
        this.ave=ave;
