@@ -7,7 +7,7 @@ namespace Statistics
        internal float ave;
        internal float max;
        internal float min;
-        
+         
        Stats(){
        ave=0.0;
        max=0.0;
