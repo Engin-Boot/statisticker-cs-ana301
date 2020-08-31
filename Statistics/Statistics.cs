@@ -18,11 +18,13 @@ namespace Statistics
     {
         public Stats CalculateStatistics(List<Double> numbers) {
             //Implement statistics here
-            Stats ans=new Stats(0.0,0.0,0.0);
+            Stats ans=new Stats(NaN,NaN,NaN);
             if(numbers.Count==0)
                 return ans;
             
             ans.min=Single.MaxValue;
+            ans.max=-1;
+            
             Double sum=0.0;
             for(int i=0;i<numbers.Count;i++){
                  
