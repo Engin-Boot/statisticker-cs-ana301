@@ -18,7 +18,7 @@ namespace Statistics
     {
         public Stats CalculateStatistics(List<Double> numbers) {
             //Implement statistics here
-            Stats ans=new Stats(NaN,NaN,NaN);
+            Stats ans=new Stats(Double.NaN,Double.NaN,Double.NaN);
             if(numbers.Count==0)
                 return ans;
             
