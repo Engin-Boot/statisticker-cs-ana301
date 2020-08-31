@@ -8,7 +8,7 @@ namespace Statistics
        public Double max;
        public Double min;
          
-       Stats(Double ave,Double max,Double min){
+       public Stats(Double ave,Double max,Double min){
        this.ave=ave;
        this.max=max;
        this.min=min;
