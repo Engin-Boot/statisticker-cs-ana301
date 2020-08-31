@@ -8,17 +8,17 @@ namespace Statistics
        internal Double max;
        internal Double min;
          
-       Stats(){
-       ave=0.0;
-       max=0.0;
-       min=Single.MaxValue;
+       Stats(Double ave,Double max,Double min){
+       this.ave=ave;
+       this.max=max;
+       this.min=min;
        }
     }
     public class StatsComputer
     {
         public Stats CalculateStatistics(List<float> numbers) {
             //Implement statistics here
-            Stats ans=new Stats();
+            Stats ans=new Stats(0.0,0.0,Single.MaxValue);
             Double sum=0.0;
             for(int i=0;i<numbers.Count;i++){
                  
