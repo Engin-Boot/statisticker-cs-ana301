@@ -18,7 +18,11 @@ namespace Statistics
     {
         public Stats CalculateStatistics(List<Double> numbers) {
             //Implement statistics here
-            Stats ans=new Stats(0.0,0.0,Single.MaxValue);
+            Stats ans=new Stats(0.0,0.0,0.0);
+            if(numbers.Count==0)
+                return ans;
+            
+            ans.min=Single.MaxValue;
             Double sum=0.0;
             for(int i=0;i<numbers.Count;i++){
                  
@@ -28,8 +32,7 @@ namespace Statistics
                 
             }
             ans.ave=sum/numbers.Count;
-            if(numbers.Count==0)
-                ans.min=0.0;
+            
             return ans;
             
         }
