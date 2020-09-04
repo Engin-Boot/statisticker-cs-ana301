@@ -31,5 +31,17 @@ namespace Statistics.Test
             //Double.NaN (not-a-number), as described in
             //https://docs.microsoft.com/en-us/dotnet/api/system.double.nan?view=netcore-3.1
         }
+        
+        [Fact]
+        public void TestForStatisticsWhenInputListContainsNaN()
+        {
+            var statsComputer = new StatsComputer();
+            var computedStats = statsComputer.CalculateStatistics(
+                new List<Double>{1.5, 8.9,Double.NaN, 3.2, 4.5});
+            float epsilon = 0.001F;
+            Assert.True(Math.Abs(computedStats.ave - 4.525) <= epsilon);
+            Assert.True(Math.Abs(computedStats.max - 8.9) <= epsilon);
+            Assert.True(Math.Abs(computedStats.min - 1.5) <= epsilon);
+        }
     }
 }
