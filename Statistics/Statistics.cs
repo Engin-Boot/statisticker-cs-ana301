@@ -29,7 +29,7 @@ namespace Statistics
             int reject=0;
             
             for(int i=0;i<numbers.Count;i++){
-                reject+=check(numebrs,i);
+                reject+=check(numbers,i);
                 sum+=numbers[i];
                 ans.max=Math.Max(ans.max,numbers[i]);
                 ans.min=Math.Min(ans.min,numbers[i]);
