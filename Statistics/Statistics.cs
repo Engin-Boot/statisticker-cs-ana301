@@ -29,7 +29,7 @@ namespace Statistics
             int reject=0;
             
             
-            numbers.RemoveAll(numbers=>Double.IsNaN(numbers));
+            numbers.RemoveAll(numbers=>numbers==Double.NaN);
             
             for(int i=0;i<numbers.Count;i++){
                 reject+=check(numbers,i);
