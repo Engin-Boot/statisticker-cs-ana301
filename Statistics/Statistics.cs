@@ -27,11 +27,9 @@ namespace Statistics
             
             Double sum=0.0;
             int reject=0;
+            
             for(int i=0;i<numbers.Count;i++){
-                if(Double.IsNaN(numbers[i]))
-                {i++;
-                 reject++;
-                }
+                reject+=check(numebrs,i)
                 sum+=numbers[i];
                 ans.max=Math.Max(ans.max,numbers[i]);
                 ans.min=Math.Min(ans.min,numbers[i]);
@@ -41,6 +39,15 @@ namespace Statistics
             
             return ans;
             
+        }
+        public static int check(List<Double> numbers,int i){
+        
+                if(Double.IsNaN(numbers[i])){
+                    return 1;
+                    
+                }
+            
+                return 0;
         }
     }
 }
