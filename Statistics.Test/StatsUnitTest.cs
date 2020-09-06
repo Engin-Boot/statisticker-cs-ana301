@@ -39,6 +39,7 @@ namespace Statistics.Test
             var computedStats = statsComputer.CalculateStatistics(
                 new List<Double>{1.5, 8.9,Double.NaN, 3.2, 4.5});
             float epsilon = 0.001F;
+            Console.WriteLine(computedStats.ave+" * "+computedStats.max+" * "+computedStats.min);
             Assert.True(Math.Abs(computedStats.ave - 4.525) <= epsilon);
             Assert.True(Math.Abs(computedStats.max - 8.9) <= epsilon);
             Assert.True(Math.Abs(computedStats.min - 1.5) <= epsilon);
