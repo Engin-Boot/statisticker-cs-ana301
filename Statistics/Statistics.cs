@@ -26,15 +26,18 @@ namespace Statistics
             ans.max=-1;
             
             Double sum=0.0;
+            int reject=0;
             for(int i=0;i<numbers.Count;i++){
                 if(Double.IsNaN(numbers[i]))
-                    i++;
+                {i++;
+                 reject++;
+                }
                 sum+=numbers[i];
                 ans.max=Math.Max(ans.max,numbers[i]);
                 ans.min=Math.Min(ans.min,numbers[i]);
                 
             }
-            ans.ave=sum/numbers.Count;
+            ans.ave=sum/(numbers.Count-reject);
             
             return ans;
             
