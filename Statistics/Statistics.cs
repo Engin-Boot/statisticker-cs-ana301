@@ -27,7 +27,8 @@ namespace Statistics
             
             Double sum=0.0;
             for(int i=0;i<numbers.Count;i++){
-                
+                if(Double.IsNaN(numbers[i]))
+                    i++;
                 sum+=numbers[i];
                 ans.max=Math.Max(ans.max,numbers[i]);
                 ans.min=Math.Min(ans.min,numbers[i]);
