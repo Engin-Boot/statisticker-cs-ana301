@@ -28,6 +28,9 @@ namespace Statistics
             Double sum=0.0;
             int reject=0;
             
+            
+            numbers.RemoveAll(numbers=>Double.IsNaN(numbers));
+            
             for(int i=0;i<numbers.Count;i++){
                 reject+=check(numbers,i);
                 sum+=numbers[i];
